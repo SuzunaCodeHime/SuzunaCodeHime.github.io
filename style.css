@@ -1,0 +1,146 @@
+/*全局样式*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 设置整个网页页面背景颜色 */
+body {
+    background-color: #fff8e7;
+}
+
+/* 导航栏：优化高度、间距、质感 */
+.nav{
+    background-color: #2d3436;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    /* 核心：文字绝对居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 定位基准 */
+    position: relative;
+    min-height: 90px;
+    /* 轻微阴影，增加立体感 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 头像：精致圆形 + 白色边框 + 居中 */
+.left-img {
+    position: absolute;
+    left: 30px;    /* 左侧留白更美观 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* 白色细边框，和深色导航形成对比，超精致 */
+    border: 2px solid #ffffff;
+    /* 轻微发光效果 */
+    box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+/* ========== 导航栏右下角 GitHub 胶囊按钮 ========== */
+.github-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 30px; /* 灵动岛胶囊圆角 */
+  background-color: #ffffff;
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.github-btn:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* ====================== */
+/* 工具卡片板块样式 */
+/* ====================== */
+.tools-section {
+  /* 板块上下间距 */
+  margin: 50px auto;
+  /* 限制最大宽度，居中显示 */
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+/* 工具标题样式 */
+.tools-title {
+  text-align: center;
+  font-size: 28px;
+  color: #2d3436;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* 卡片容器：布局排版 */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* 卡片之间的间距 */
+  gap: 25px;
+}
+
+/* 工具卡片：独立方块 */
+.card {
+  width: 280px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 16px;
+  /* 柔和阴影，和导航风格统一 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* 卡片内容居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 悬浮动画 */
+  transition: all 0.3s ease;
+}
+
+/* 卡片悬浮效果：上浮+加深阴影 */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 卡片内链接样式 */
+.card a {
+  color: #2d3436;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* 链接悬浮效果 */
+.card a:hover {
+  color: #ffffff;
+  background-color: #2d3436;
+}
+
+.footer{
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 1px;
+
+}

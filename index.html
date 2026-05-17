@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的大学生主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!--头部-->
-  <header>
-    <h1>欢迎来到我的大学生主页</h1>
-    <p>2025级计算机应用技术2班</p>
-  </header>
-  <hr>
-  <!--个人简介-->
-  <section>
-    <h2>个人简介</h2>
-    <p>学号：2025050052<br>
-        姓名：曹淳硕<br>
-        年龄：18岁<br>
-        爱好：Code、摄影、二次元
-      </p>
-    </section>
-<hr>
-  <!--目标-->
-  <section>
-    <h2>校园生活&学习目标</h2>
-    <p>好好减肥，天天打Code</p>
-    <p>座右铭：<q>所有，或一无所有！</q></p>
-    </section>
-    <hr>
-   
-    <!--联系方式-->
-    <footer>
-      <address>
-      作者：SuzunaCodeHime<br>
-      
-      </address>
-    </footer>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <img src="./img/SuzunaCodeHime.png" alt="我的头像" class="left-img">
+        SuzunaCodeHime
+        <!-- 导航栏右下角GitHub按钮 -->
+        <a href="https://github.com/SuzunaCodeHime" target="_blank" class="github-btn">My GitHub</a>
+    </div>
+
+    <!-- 工具板块 -->
+<section class="tools-section">
+  <h2 class="tools-title">我的项目工具</h2>
+  <!--工具卡片容器-->
+  <div class="card-container">
+    <!--第1个工具卡片-->
+    <div class="card">
+      <a href="https://suzunacodehime.github.io/Class-Attendance-System/" target="_blank">课堂点名系统</a>
+    </div>
+
+    <!--第2个工具卡片-->
+    <div class="card">
+      <a href="https://suzunacodehime.github.io/520-Greeting-Card/" target="_blank">520贺卡</a>
+    </div>
+  </div>
+</section>
+<address class="footer">
+    作者：SuzunaCodeHime
+</address>
 </body>
 </html>
