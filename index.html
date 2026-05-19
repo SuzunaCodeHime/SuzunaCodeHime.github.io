@@ -2,37 +2,211 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>SuzunaCodeHimeの个人主页</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            background-color: #f8e8ee;
+            color: #444;
+            font-family: "微软雅黑",sans-serif;
+            line-height: 2.1;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+        .container{
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* 头部封面 */
+        .header{
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        .avatar{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #e8688a;
+            margin: 0 auto 15px;
+            object-fit: cover;
+        }
+        .name{
+            font-size: 28px;
+            color: #e8688a;
+            font-weight: bold;
+        }
+        .sign{
+            font-size: 16px;
+            color: #888;
+            margin-top: 8px;
+        }
+        .time-box{
+            margin:10px 0;
+            color:#e8688a;
+        }
+        /* 通用板块样式 */
+        .box{
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px #f0d8e0;
+            transition: all 0.3s;
+        }
+        .box:hover{
+            transform: translateY(-5px);
+        }
+        .title{
+            font-size: 20px;
+            color: #e8688a;
+            margin-bottom: 15px;
+            border-left: 4px solid #e8688a;
+            padding-left: 10px;
+        }
+
+        .tools-link{
+          color: #444;
+        }
+        /* 回到顶部 */
+        .top-btn{
+            position: fixed;
+            bottom: 30px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #e8688a;
+            color:#fff;
+            text-align: center;
+            line-height: 45px;
+            font-size:20px;
+            cursor: pointer;
+            display: none;
+        }
+        /* 爱心特效 */
+        .love{
+            position: absolute;
+            color:#e8688a;
+            font-size:20px;
+            user-select: none;
+            z-index:-1;
+        }
+        /* 手机适配 */
+        @media (max-width:500px){
+            .name{font-size:24px;}
+            .box{padding:20px 15px;}
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <div class="nav">
-        <img src="./img/SuzunaCodeHime.png" alt="我的头像" class="left-img">
-        SuzunaCodeHime
-        <!-- 导航栏右下角GitHub按钮 -->
-        <a href="https://github.com/SuzunaCodeHime" target="_blank" class="github-btn">My GitHub</a>
+    <div class="container">
+        <!-- 头部区域 -->
+        <div class="header">
+            <img src="./img/SuzunaCodeHime.png" class="avatar" alt="头像">
+            <div class="name">SuzunaCodeHime</div>
+            <div class="sign">心有温柔，岁岁安然</div>
+            <div class="time-box" id="nowTime"></div>
+            <div id="welcomeText"></div>
+        </div>
+
+        <!-- 关于我 -->
+        <div class="box">
+            <div class="title">关于我</div>
+            <p>07年在校大学生，性格细腻温柔，心思敏感内敛。</p>
+            <p>偏爱安静独处，喜欢慢节奏的生活，待人真诚心软。</p>
+            <p>正在努力变好，认真学习，奔赴属于自己的温柔未来。</p>
+        </div>
+
+        <!-- 兴趣爱好 -->
+        <div class="box">
+            <div class="title">兴趣喜好</div>
+            <p>📷 摄影记录日常，偏爱氛围感画面</p>
+            <p>🎹 闲暇弹奏钢琴，舒缓情绪</p>
+            <p>💻 钻研前端代码，自学HTML/CSS/JS</p>
+            <p>🎧 偏爱安静音乐，护肤穿搭，浅色系一切美好事物</p>
+        </div>
+        <!-- 项目工具 -->
+        <div class="box">
+            <div class="title">项目工具</div>
+            <p><a class="tools-link" href="https://suzunacodehime.github.io/Class-Attendance-System/" target="_blank">课堂点名系统</a></p>
+            <p><a class="tools-link" href="https://suzunacodehime.github.io/520-Greeting-Card/" target="_blank">520贺卡</a></p>
+        </div>
+
+        <!-- 心情随笔 -->
+        <div class="box">
+            <div class="title">随心随笔</div>
+            <p>不必迎合所有人，安稳自在便是最好。</p>
+            <p>好好生活，慢慢相遇，好好爱身边值得的人。</p>
+        </div>
+
+        <!-- 底部 -->
+        <div style="text-align:center;margin:40px 0;color:#999;font-size:14px;">
+            愿岁月温柔以待 | 2026 自制个人主页
+        </div>
     </div>
 
-    <!-- 工具板块 -->
-<section class="tools-section">
-  <h2 class="tools-title">我的项目工具</h2>
-  <!--工具卡片容器-->
-  <div class="card-container">
-    <!--第1个工具卡片-->
-    <div class="card">
-      <a href="https://suzunacodehime.github.io/Class-Attendance-System/" target="_blank">课堂点名系统</a>
-    </div>
+    <!-- 回到顶部按钮 -->
+    <div class="top-btn" id="toTop">↑</div>
 
-    <!--第2个工具卡片-->
-    <div class="card">
-      <a href="https://suzunacodehime.github.io/520-Greeting-Card/" target="_blank">520贺卡</a>
-    </div>
-  </div>
-</section>
-<address class="footer">
-    作者：SuzunaCodeHime
-</address>
+    <script>
+        // 1. 实时时间
+        function getTime(){
+            let d = new Date();
+            let y = d.getFullYear();
+            let m = d.getMonth()+1;
+            let day = d.getDate();
+            let week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"][d.getDay()];
+            document.getElementById("nowTime").innerText = `${y}年${m}月${day}日 ${week}`;
+        }
+        setInterval(getTime,1000);
+        getTime();
+
+        // 2. 欢迎打字文字
+        let welcome = "欢迎来到我的小小世界✨";
+        let wIndex = 0;
+        let welcomeDom = document.getElementById("welcomeText");
+        function showWelcome(){
+            if(wIndex < welcome.length){
+                welcomeDom.innerHTML += welcome.charAt(wIndex);
+                wIndex++;
+                setTimeout(showWelcome,100);
+            }
+        }
+        window.onload = showWelcome;
+
+        // 3. 回到顶部
+        let topBtn = document.getElementById("toTop");
+        window.onscroll = function(){
+            if(document.documentElement.scrollTop > 200){
+                topBtn.style.display = "block";
+            }else{
+                topBtn.style.display = "none";
+            }
+        }
+        topBtn.onclick = function(){
+            window.scrollTo({top:0,behavior:"smooth"});
+        }
+
+        // 4. 爱心飘落
+        function createHeart(){
+            let heart = document.createElement("div");
+            heart.className = "love";
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random()*innerWidth + "px";
+            heart.style.top = "-20px";
+            document.body.appendChild(heart);
+            let speed = Math.random()*2+1.5;
+            function down(){
+                let t = parseInt(heart.style.top||0);
+                heart.style.top = t + speed + "px";
+                if(t > innerHeight) document.body.removeChild(heart);
+                requestAnimationFrame(down);
+            }
+            down();
+        }
+        setInterval(createHeart,400);
+    </script>
 </body>
 </html>
